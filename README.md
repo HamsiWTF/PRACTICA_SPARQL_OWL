@@ -13,7 +13,7 @@ A parte tenemos que realizar unas cuantas consultas SPARQL en el mismo programa 
 
 Tenéis las consultas y el resultado de ellas en el pdf de consultas.pdf. 
 
-También deciros que el proyecto a importar en Protégé es el que acaba con la extensión .pprj: en practica3.pprj
+También deciros que el proyecto a importar en Protégé es el que acaba con la extensión .pprj (practica3.pprj) de este mismo directorio.
 
 Espero lo disfrutéis, cualquir cosa consultarme en los comentarios.
 
