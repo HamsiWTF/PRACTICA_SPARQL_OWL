@@ -1,0 +1,564 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:schema="https://schema.org#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns="http://www.practica3.com/pelicula.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.practica3.com/pelicula.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Reparto">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://schema.org#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Guionistas">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Equipo"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://schema.org#Place"/>
+  <owl:Class rdf:about="https://schema.org#Movie">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="generos"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="ContinenteDeOrigen"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#generos"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://schema.org#CreativeWork"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="tituloOriginal"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="idiomasRodaje"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="anioEstreno"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="duration"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="Subtitulos"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="director"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="ProducidaPor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="musicBy"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#tituloOriginal"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="actor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Direccion">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Equipo"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Empresa"/>
+  <owl:Class rdf:about="https://schema.org#Intangible"/>
+  <owl:Class rdf:about="https://schema.org#VideoObject">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MediaObject"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Quantity">
+    <rdfs:subClassOf rdf:resource="https://schema.org#Intangible"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://schema.org#Duration">
+    <rdfs:subClassOf rdf:resource="#Quantity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#duration"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Actores">
+    <rdfs:subClassOf rdf:resource="#Reparto"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://schema.org#Country">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://schema.org#AdministrativeArea"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="Pais"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Personajes">
+    <rdfs:subClassOf rdf:resource="#Reparto"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://schema.org#ImageObject">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MediaObject"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MediaObject">
+    <rdfs:subClassOf rdf:resource="https://schema.org#CreativeWork"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://schema.org#AdministrativeArea">
+    <rdfs:subClassOf rdf:resource="https://schema.org#Place"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Produccion">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Equipo"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Equipo">
+    <rdfs:subClassOf rdf:resource="https://schema.org#Person"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#ContinenteDeOrigen">
+    <rdfs:range rdf:resource="https://schema.org#Country"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#musicBy">
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+    <rdfs:range rdf:resource="#Produccion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="guioniza">
+    <rdfs:range rdf:resource="#Personajes"/>
+    <rdfs:domain rdf:resource="#Guionistas"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="contrataA">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Actores"/>
+          <owl:Class rdf:about="#Equipo"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Empresa"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="avisaEstrenoCon"/>
+  <owl:ObjectProperty rdf:about="#ProducidaPor">
+    <rdfs:range rdf:resource="#Produccion"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="financiaA">
+    <rdfs:domain rdf:resource="#Empresa"/>
+    <rdfs:range rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="interpreta">
+    <rdfs:domain rdf:resource="#Actores"/>
+    <rdfs:range rdf:resource="#Personajes"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="esContratadoPor">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Actores"/>
+          <owl:Class rdf:about="#Equipo"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Empresa"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="financiadoPor">
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+    <rdfs:range rdf:resource="#Empresa"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="esGrabadoPor">
+    <rdfs:domain rdf:resource="#Personajes"/>
+    <rdfs:range rdf:resource="#Produccion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="esEditadoPor">
+    <rdfs:range rdf:resource="#Produccion"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="dirigidaPor">
+    <rdfs:range rdf:resource="#Direccion"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="esGuionizadaPor">
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+    <rdfs:range rdf:resource="#Guionistas"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="participaEn">
+    <rdfs:domain rdf:resource="#Personajes"/>
+    <rdfs:range rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="edita">
+    <rdfs:domain rdf:resource="#Produccion"/>
+    <rdfs:range rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="protagonizadoPor">
+    <rdfs:range rdf:resource="#Actores"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="esInterpretadoPor">
+    <rdfs:domain rdf:resource="#Personajes"/>
+    <rdfs:range rdf:resource="#Actores"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="grabaA">
+    <rdfs:range rdf:resource="#Personajes"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Produccion"/>
+          <owl:Class rdf:about="#Direccion"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="nombre">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Produccion"/>
+          <owl:Class rdf:about="#Empresa"/>
+          <owl:Class rdf:about="#Actores"/>
+          <owl:Class rdf:about="#Personajes"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#generos">
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Recaudacion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#Empresa"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#director">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://schema.org#Movie"/>
+          <owl:Class rdf:about="#Direccion"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="trailer">
+    <rdfs:domain rdf:resource="https://schema.org#VideoObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#Subtitulos">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="personaje">
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#Pais">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://schema.org#Country"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#idiomasRodaje">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#duration">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://schema.org#Movie"/>
+          <owl:Class rdf:about="https://schema.org#Duration"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Presupuesto">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#Empresa"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#anioEstreno">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="resumen">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="productionCompany">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#actor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#tituloOriginal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="relacionAspecto">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="tituloEspanol">
+    <rdfs:domain rdf:resource="https://schema.org#Movie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="imagen">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="https://schema.org#ImageObject"/>
+          <owl:Class rdf:about="https://schema.org#Movie"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <schema:Duration rdf:ID="Duration_48"/>
+  <schema:VideoObject rdf:ID="SchemaTrailer">
+    <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >https://www.youtube.com/watch?v=FiRVcExwBVA</trailer>
+  </schema:VideoObject>
+  <schema:ImageObject rdf:ID="Cartelera">
+    <imagen rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >https://cartelera.elperiodico.com/estaticos//0/611/611679_p.jpg</imagen>
+    <imagen rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >https://r3.abcimg.es/resizer/resizer.php?imagen=http%3A%2F%2Fwww.abc.es%2Fmedia%2Fpeliculas%2F000%2F044%2F428%2Ftitanic-1.jpg&amp;nuevoancho=620&amp;medio=abc</imagen>
+  </schema:ImageObject>
+  <Empresa rdf:ID="EmpresaUniversal">
+    <contrataA>
+      <Actores rdf:ID="ActoresPrincipales">
+        <esContratadoPor rdf:resource="#EmpresaUniversal"/>
+        <interpreta>
+          <Personajes rdf:ID="PersonajesPrincipales">
+            <actor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Leonardo Di Caprio</actor>
+            <esInterpretadoPor rdf:resource="#ActoresPrincipales"/>
+            <participaEn>
+              <schema:Movie rdf:ID="Titanic">
+                <generos rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Romance</generos>
+                <resumen rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Una joven (Kate Winslet) de sociedad abandona a su arrogante pretendiente (Billy Zane) por un artista (Leonardo DiCaprio) humilde en el transatlántico que se hundió durante su viaje inaugural.</resumen>
+                <ContinenteDeOrigen>
+                  <schema:Country rdf:ID="america">
+                    <Pais rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Estados Unidos</Pais>
+                  </schema:Country>
+                </ContinenteDeOrigen>
+                <personaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Rose Dewitt</personaje>
+                <Subtitulos rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</Subtitulos>
+                <personaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Caledon Nathan</personaje>
+                <idiomasRodaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Portugues</idiomasRodaje>
+                <financiadoPor rdf:resource="#EmpresaUniversal"/>
+                <esEditadoPor>
+                  <Produccion rdf:ID="ProduccionTitanic">
+                    <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Jon Landau</nombre>
+                    <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Peter Lamont</nombre>
+                    <edita rdf:resource="#Titanic"/>
+                    <grabaA rdf:resource="#PersonajesPrincipales"/>
+                    <esContratadoPor rdf:resource="#EmpresaUniversal"/>
+                  </Produccion>
+                </esEditadoPor>
+                <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >195</duration>
+                <productionCompany rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Universal</productionCompany>
+                <esGuionizadaPor>
+                  <Guionistas rdf:ID="GuionistasPeliculas">
+                    <guioniza rdf:resource="#PersonajesPrincipales"/>
+                    <esContratadoPor rdf:resource="#EmpresaUniversal"/>
+                    <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >James Cameron</nombre>
+                  </Guionistas>
+                </esGuionizadaPor>
+                <actor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Kate Winslet</actor>
+                <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >James Cameron</director>
+                <generos rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Catastrofe</generos>
+                <tituloEspanol rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Titanic</tituloEspanol>
+                <generos rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Drama</generos>
+                <actor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Leonardo Di Caprio</actor>
+                <anioEstreno rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                >1997-01-11</anioEstreno>
+                <actor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Billy Zane</actor>
+                <dirigidaPor>
+                  <Direccion rdf:ID="DirectorTitanic">
+                    <esContratadoPor rdf:resource="#EmpresaUniversal"/>
+                    <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >James Cameron</director>
+                    <grabaA rdf:resource="#PersonajesPrincipales"/>
+                  </Direccion>
+                </dirigidaPor>
+                <idiomasRodaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Español</idiomasRodaje>
+                <personaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Jack Dawson</personaje>
+                <protagonizadoPor rdf:resource="#ActoresPrincipales"/>
+                <idiomasRodaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Frances</idiomasRodaje>
+                <idiomasRodaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Ingles</idiomasRodaje>
+                <ProducidaPor rdf:resource="#ProduccionTitanic"/>
+                <relacionAspecto rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >15:4</relacionAspecto>
+                <tituloOriginal rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Titanic</tituloOriginal>
+                <imagen rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >www.google.es/imagen.png</imagen>
+                <musicBy rdf:resource="#ProduccionTitanic"/>
+              </schema:Movie>
+            </participaEn>
+            <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Jack Dawson</nombre>
+            <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Rose Dewitt</nombre>
+            <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></nombre>
+            <esGrabadoPor rdf:resource="#ProduccionTitanic"/>
+          </Personajes>
+        </interpreta>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Leonardo Di Caprio</nombre>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Kate Winslet</nombre>
+        <actor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Leonardo Di Caprio</actor>
+      </Actores>
+    </contrataA>
+    <Presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >5000000.0</Presupuesto>
+    <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Universal</nombre>
+    <Recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >2000000.0</Recaudacion>
+    <financiaA rdf:resource="#Titanic"/>
+  </Empresa>
+  <Personajes rdf:ID="PersonajeSecundario">
+    <esGrabadoPor rdf:resource="#ProduccionTitanic"/>
+    <actor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></actor>
+    <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Caledon Nathan</nombre>
+    <esInterpretadoPor>
+      <Actores rdf:ID="ActorSecundario">
+        <esContratadoPor rdf:resource="#EmpresaUniversal"/>
+        <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Billy Zane</nombre>
+        <interpreta rdf:resource="#PersonajeSecundario"/>
+      </Actores>
+    </esInterpretadoPor>
+    <participaEn rdf:resource="#Titanic"/>
+  </Personajes>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
