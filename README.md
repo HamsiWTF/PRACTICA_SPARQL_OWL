@@ -11,6 +11,10 @@ Lo podéis descargar gratis en el siguiente enlace: https://protege.stanford.edu
 
 A parte tenemos que realizar unas cuantas consultas SPARQL en el mismo programa Protégé 3.5, las más básicas y sencillas.
 
+Tenéis las consultas y el resultado de ellas en el pdf de consultas.pdf. 
+
+También deciros que el proyecto a importar en Protégé es el que acaba con la extensión .pprj: en practica3.pprj
+
 Espero lo disfrutéis, cualquir cosa consultarme en los comentarios.
 
 ENJOY IT!
